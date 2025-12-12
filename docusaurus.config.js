@@ -97,7 +97,7 @@ const config = {
             items: [
               {
                 label: 'Jungle Decision Framework',
-                to: '/docs/intro',
+                to: '/docs/framework',
               },
             ],
           },
