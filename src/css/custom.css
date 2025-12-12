@@ -1,0 +1,332 @@
+/* =========================================================
+   Apple-clean Docusaurus theme overrides
+   - Neutral base (light + dark)
+   - Blue only for interaction (hover/active/focus + primary CTAs)
+   - Consistent, readable typography
+   ========================================================= */
+
+/* ---------- Theme variables ---------- */
+:root {
+  --ifm-font-family-base: Inter, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --ifm-line-height-base: 1.7;
+
+  /* Apple-ish interaction color */
+  --apple-blue: #0071e3;
+  --apple-blue-hover: #0077ed;
+
+  /* Map Docusaurus “primary” to Apple blue (buttons, links, accents) */
+  --ifm-color-primary: var(--apple-blue);
+  --ifm-color-primary-dark: #0066cc;
+  --ifm-color-primary-darker: #005fbf;
+  --ifm-color-primary-light: #1a7ff0;
+  --ifm-color-primary-lighter: #2f8bf3;
+
+  /* Light defaults (Docusaurus will apply these for light mode) */
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-font-color-base: #111111;
+
+  /* Derived UI tokens */
+  --border: rgba(0, 0, 0, 0.10);
+  --jf-muted: rgba(0, 0, 0, 0.70);
+  --jf-subtle: rgba(0, 0, 0, 0.56);
+
+  --menu-hover-bg: rgba(0, 0, 0, 0.04);
+  --menu-active-bg: rgba(0, 113, 227, 0.10);
+}
+
+.button.button--secondary {
+  background: var(--btn-secondary-bg);
+  border: 1px solid var(--btn-secondary-border);
+  color: var(--btn-secondary-text);
+}
+
+.button.button--secondary:hover {
+  background: var(--menu-active-bg);
+  border-color: var(--apple-blue);
+  color: var(--apple-blue);
+}
+
+
+/* Dark mode overrides */
+html[data-theme='dark'] {
+  --ifm-background-color: #0b0c0f;
+  --ifm-background-surface-color: #12141a;
+  --ifm-font-color-base: rgba(255, 255, 255, 0.92);
+
+  --border: rgba(255, 255, 255, 0.14);
+  --jf-muted: rgba(255, 255, 255, 0.74);
+  --jf-subtle: rgba(255, 255, 255, 0.62);
+
+  --menu-hover-bg: rgba(255, 255, 255, 0.06);
+  --menu-active-bg: rgba(0, 113, 227, 0.18);
+}
+
+/* ---------- Global link behavior (Apple-ish: subtle, blue on hover) ---------- */
+.markdown a,
+.theme-doc-markdown a,
+main a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown a:hover,
+.theme-doc-markdown a:hover,
+main a:hover {
+  color: var(--apple-blue);
+  text-decoration: underline;
+}
+
+/* Focus outlines (accessibility + Apple feel) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--apple-blue);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* ---------- Navbar (readable in both modes) ---------- */
+.navbar {
+  background: var(--ifm-background-surface-color);
+  box-shadow: none;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar__title {
+  color: var(--ifm-font-color-base);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.navbar__link {
+  color: var(--jf-muted);
+  font-weight: 550;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: var(--apple-blue);
+}
+
+/* Make the theme toggle icon readable */
+.navbar__items .colorModeToggle_DEke,
+.navbar__items .toggleButton_gllP {
+  opacity: 0.9;
+}
+
+/* ---------- Markdown typography ---------- */
+.markdown {
+  max-width: 72ch;
+}
+
+.markdown h1 {
+  letter-spacing: -0.02em;
+}
+
+.markdown h2 {
+  font-size: 1.55rem;
+  font-weight: 650;
+  margin-top: 2.6rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.2rem;
+}
+
+.markdown h3 {
+  font-size: 1.15rem;
+  font-weight: 650;
+  margin-top: 1.6rem;
+}
+
+.markdown p,
+.markdown li {
+  line-height: 1.75;
+}
+
+/* ---------- Home page (custom index.js) ---------- */
+.home .hero {
+  background: var(--ifm-background-color);
+  border-bottom: 1px solid var(--border);
+  padding: 72px 0 34px;
+}
+
+.home .kicker {
+  color: var(--jf-subtle);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.home .title {
+  font-size: 44px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px;
+  color: var(--ifm-font-color-base);
+}
+
+.home .subtitle {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--jf-muted);
+  margin: 0 0 18px;
+}
+
+.home .metaRow {
+  margin-top: 10px;
+  padding-bottom: 6px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  color: var(--jf-subtle);
+  font-size: 14px;
+}
+
+.home .ctaRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 18px 0 10px;
+}
+
+/* Primary CTA (your custom class) */
+.btnPrimary {
+  background: var(--apple-blue);
+  color: #fff;
+  border: 1px solid var(--apple-blue);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 650;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnPrimary:hover {
+  background: var(--apple-blue-hover);
+  border-color: var(--apple-blue-hover);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Secondary CTA */
+.btnSecondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--jf-muted);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 650;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnSecondary:hover {
+  border-color: var(--apple-blue);
+  color: var(--apple-blue);
+  text-decoration: none;
+}
+
+/* If you use Docusaurus buttons, keep them readable too */
+.button--primary {
+  color: #fff !important;
+}
+
+/* Home sections + cards */
+.homeSection {
+  padding: 36px 0 68px;
+  background: var(--ifm-background-color);
+}
+
+.homeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.homeCard {
+  border: 1px solid var(--border);
+  background: var(--ifm-background-surface-color);
+  border-radius: 14px;
+  padding: 18px 18px 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.homeCard:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+}
+
+html[data-theme='dark'] .homeCard:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.homeCard h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 650;
+}
+
+.homeCard p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--jf-muted);
+}
+
+/* ---------- Docs sidebar: correct sticky behavior + readable states ---------- */
+:root {
+  --sidebar-top: calc(var(--ifm-navbar-height) + var(--docusaurus-announcement-bar-height, 0px));
+}
+
+
+/* Menu styling (Apple clean) */
+.menu__link {
+  position: relative;
+  border-radius: 10px;
+  padding: 8px 10px 8px 14px;
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.menu__link:hover {
+  background: var(--menu-hover-bg);
+  color: var(--apple-blue);
+}
+
+.menu__link--active {
+  background: var(--menu-active-bg);
+  color: var(--apple-blue);
+  font-weight: 650;
+}
+
+.menu__list-item {
+  margin: 0;
+}
+
+/* ---------- Optional: reduce template noise ---------- */
+/*
+.pagination-nav { display:none; }
+.theme-doc-footer { border-top:none; }
+*/
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .home .title { font-size: 34px; }
+  .homeGrid { grid-template-columns: 1fr; }
+}
