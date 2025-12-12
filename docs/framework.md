@@ -56,7 +56,7 @@ No prior jungle knowledge is required. The system starts with simple, repeatable
 ## Quick Start (5 Minutes)
 
 1. **Level 1 ward** the enemy buff/ raptors to identify their start.
-2. **Full clear** from Red or Blue → aim for level 6 by ~3:15.
+2. **Full clear** from Red or Blue → aim for level 4 by ~3:15.
 3. **Check minimap every ~5 seconds** to track summoners and lane states.
 4. **Practice once** in a custom game to time your first clear.
 
