@@ -19,19 +19,6 @@ const config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-   image: 'img/thumbnail.png',
-
-  metadata: [
-    { name: 'og:title', content: 'Jungle Decision Framework' },
-    {
-      name: 'og:description',
-      content:
-        'A decision-driven framework for jungling focused on tempo, rules, and repeatable decision-making.',
-    },
-    { name: 'og:image', content: 'https://kopyk.github.io/jungle-framework/img/thumbnail.jpg' },
-    { name: 'twitter:card', content: 'summary_large_image' },
-  ],
-
   // Set the production url of your site here
   url: 'https://kopyk.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -91,7 +78,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/jg-icon.png',
+      image: 'img/thumbnail.jpg',
       colorMode: {
         respectPrefersColorScheme: true,
       },
