@@ -86,7 +86,7 @@ export default function Home() {
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 26 }}>
               <Link
                 className="button button--primary button--lg"
-                to="/docs/docs/jungle-decision-framework"
+                to="/docs/jungle-decision-framework"
               >
                 Read the framework
               </Link>
