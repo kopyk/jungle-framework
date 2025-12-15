@@ -9,7 +9,7 @@ title: Foundations
 Every champion has an *optimal first clear* tailored to their kit (e.g., Yi: Red start → Meditate sustain for speed). However, the **standard full clear** (all 6 camps) is *more than sufficient* for ~95% of games—especially when it funnels directly into your **win condition** (scaling, farming, invading).
 
 ### Why Full Clear Wins
-- **Highest early level** (≈ level 6 at 3:15–3:30)
+- **Highest early level** (≈ level 4 at 3:15–3:30)
 - Full HP/resources for **Scuttle**, **Drake**, or **Herald**
 - Repeatable clears create a **tempo baseline** (≈ 9–10 CS/min in Season 15)
 
