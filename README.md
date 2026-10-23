@@ -1,4 +1,11 @@
-# Jungle Decision Framework
+# Jordan Yan Docs
+
+Documentation site at [docs.jordanyan.com](https://docs.jordanyan.com) with two sections:
+
+- **Defense, Aerospace & AI Samples** (`docs/samples/`): an AI model card, a MIL-STD-38784-style maintenance procedure, and an Interface Control Document excerpt. All systems are fictional.
+- **Jungle Decision Framework** (`docs/`): the original decision-system documentation project, described below.
+
+## Jungle Decision Framework
 
 A decision-driven macro framework for **jungling in League of Legends**.
 

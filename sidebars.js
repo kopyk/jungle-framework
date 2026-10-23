@@ -1,5 +1,18 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 const sidebars = {
+  Samples: [
+    'samples/overview',
+    {
+      type: 'category',
+      label: 'Defense, Aerospace & AI',
+      collapsed: false,
+      items: [
+        'samples/model-card',
+        'samples/maintenance-procedure',
+        'samples/interface-control-document',
+      ],
+    },
+  ],
   Framework: [
     {
       type: 'category',

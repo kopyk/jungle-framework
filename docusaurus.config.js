@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Jungle Bible',
-  tagline: 'Jungling Guide for Documentation Purposes',
+  title: 'Jordan Yan Docs',
+  tagline: 'Technical writing samples for defense, aerospace, and AI systems',
   favicon: 'img/jg-icon.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -83,11 +83,30 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        
+        title: 'Jordan Yan Docs',
         logo: {
-          alt: 'Jungle Framework Icon',
+          alt: 'Jordan Yan Docs Icon',
           src: 'img/jg-icon.png',
         },
+        items: [
+          {
+            type: 'docSidebar',
+            sidebarId: 'Samples',
+            position: 'left',
+            label: 'Defense & AI Samples',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'Framework',
+            position: 'left',
+            label: 'Jungle Framework',
+          },
+          {
+            href: 'https://www.jordanyan.com',
+            label: 'Portfolio',
+            position: 'right',
+          },
+        ],
       },
       footer: {
         style: 'dark',
@@ -95,6 +114,10 @@ const config = {
           {
             title: 'Docs',
             items: [
+              {
+                label: 'Defense, Aerospace & AI Samples',
+                to: '/docs/samples/overview',
+              },
               {
                 label: 'Jungle Decision Framework',
                 to: '/docs/jungle-decision-framework',
@@ -112,11 +135,15 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/kopyk',
               },
+              {
+                label: 'Portfolio',
+                href: 'https://www.jordanyan.com',
+              },
             ],
           },
         
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Jungle Bible Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Jordan Yan · San Luis Obispo, CA · Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
