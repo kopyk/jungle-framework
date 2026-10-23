@@ -52,130 +52,145 @@ function Card({ title, desc, href, cta = "Open" }) {
   );
 }
 
+function SectionLabel({ children }) {
+  return (
+    <div style={{ fontSize: 13, fontWeight: 700, opacity: 0.7, marginBottom: 12 }}>
+      {children}
+    </div>
+  );
+}
+
+function CardGrid({ children }) {
+  return (
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+        gap: 14,
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 export default function Home() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
     <Layout
       title={siteConfig.title}
-      description="A decision-driven approach to jungling: tempo, rules, and repeatable frameworks."
+      description="Technical writing samples for AI, defense, and aerospace systems by Jordan Yan."
     >
       <main style={{ padding: "54px 0 72px" }}>
         <div className="container">
           {/* Hero */}
           <div style={{ maxWidth: 920, margin: "0 auto" }}>
             <div style={{ fontSize: 13, fontWeight: 700, opacity: 0.7 }}>
-              {siteConfig.title}
+              Jordan Yan · Technical Writer · San Luis Obispo, CA
             </div>
 
             <h1 style={{ fontSize: 44, letterSpacing: "-0.02em", margin: "10px 0 10px" }}>
-              Jungle Decision Framework
+              Documentation for AI systems and the people who build them
             </h1>
 
-            <p style={{ fontSize: 18, lineHeight: 1.6, opacity: 0.85, margin: "0 0 18px" }}>
-              A structured approach to jungling in League of Legends focused on
-              decision-making, tempo, and repeatable rules—rather than champion-specific mechanics.
-            </p>
-
-            <p style={{ fontSize: 16, lineHeight: 1.6, opacity: 0.85, margin: "0 0 26px" }}>
-              <strong>Jungling</strong> is a decision-driven role that converts{" "}
-              <strong>time</strong> and <strong>information</strong> into map advantage.
+            <p style={{ fontSize: 18, lineHeight: 1.6, opacity: 0.85, margin: "0 0 26px" }}>
+              Writing samples that show how I document AI models, developer APIs,
+              and safety-critical systems: accurate, tested, and easy for engineers
+              and users to act on.
             </p>
 
             {/* CTAs */}
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 26 }}>
+              <Link className="button button--primary button--lg" to="/docs/samples/overview">
+                View writing samples
+              </Link>
+
               <Link
-                className="button button--primary button--lg"
+                className="button button--secondary button--lg"
                 to="/docs/jungle-decision-framework"
               >
-                Read the framework
+                Jungle Decision Framework
               </Link>
-
-              <Link className="button button--secondary button--lg" to="/docs/foundations">
-                Start with foundations
-              </Link>
-
-              <Link className="button button--secondary button--lg" to="/docs/decision-tree">
-                Jump to decision tree
-              </Link>
-            </div>
-
-            {/* What you'll learn */}
-            <div
-              style={{
-                borderTop: "1px solid var(--ifm-toc-border-color)",
-                paddingTop: 18,
-                marginTop: 8,
-              }}
-            >
-              <div style={{ fontSize: 13, fontWeight: 700, opacity: 0.7, marginBottom: 10 }}>
-                What this guide helps you do
-              </div>
-
-              <ul style={{ margin: 0, paddingLeft: 18, lineHeight: 1.75, opacity: 0.9 }}>
-                <li>Identify the correct play each minute (farm, gank, invade, hover, reset)</li>
-                <li>Convert tempo into lane pressure and objectives</li>
-                <li>Avoid common decision traps and autopilot clears</li>
-                <li>Apply rules that scale across champions and patches</li>
-              </ul>
             </div>
           </div>
 
-          {/* Entry points grid */}
+          {/* Defense & AI samples */}
           <div style={{ maxWidth: 980, margin: "34px auto 0" }}>
-            <div style={{ fontSize: 13, fontWeight: 700, opacity: 0.7, marginBottom: 12 }}>
-              Get started
-            </div>
-
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-                gap: 14,
-              }}
-            >
+            <SectionLabel>Artificial intelligence</SectionLabel>
+            <CardGrid>
               <Card
-                title="Foundations"
-                desc="A mental model for tempo, roles, and the jungle economy."
-                href="/docs/foundations"
-                cta="Start"
+                title="AI Model Card"
+                desc="Intended use, limitations, and evaluation for a runway debris detection model, mapped to DoD Responsible AI principles and the NIST AI RMF."
+                href="/docs/samples/model-card"
+                cta="Read"
               />
               <Card
-                title="Decision Rules"
-                desc="If–then heuristics you can apply instantly in-game."
-                href="/docs/decision-rules"
-                cta="Learn"
+                title="RAG Tutorial"
+                desc="Build a Q&A bot over your docs in Python with the Claude API, with working, tested code."
+                href="/docs/samples/rag-tutorial"
+                cta="Read"
+              />
+              <Card
+                title="API Reference"
+                desc="Parameters, examples, errors, and rate limits for an AI document-classification endpoint."
+                href="/docs/samples/api-reference"
+                cta="Read"
+              />
+              <Card
+                title="LLM Evaluation Rubric"
+                desc="Pass/fail criteria, test-set design, and reporting for grading an AI assistant's answers."
+                href="/docs/samples/eval-rubric"
+                cta="Read"
+              />
+            </CardGrid>
+          </div>
+
+          {/* Defense & aerospace samples */}
+          <div style={{ maxWidth: 980, margin: "34px auto 0" }}>
+            <SectionLabel>Defense &amp; aerospace</SectionLabel>
+            <CardGrid>
+              <Card
+                title="Maintenance Procedure"
+                desc="A work package for UAS propeller replacement with MIL-STD-38784 WARNING/CAUTION/NOTE advisories."
+                href="/docs/samples/maintenance-procedure"
+                cta="Read"
+              />
+              <Card
+                title="Interface Control Document"
+                desc="Byte-level telemetry message definition with units, ranges, and requirements traceability."
+                href="/docs/samples/interface-control-document"
+                cta="Read"
+              />
+            </CardGrid>
+          </div>
+
+          {/* Jungle framework */}
+          <div style={{ maxWidth: 980, margin: "34px auto 0" }}>
+            <SectionLabel>Decision-system documentation</SectionLabel>
+            <CardGrid>
+              <Card
+                title="Jungle Decision Framework"
+                desc="A multi-page decision system with rules, flowcharts, and examples that scale from beginner to expert."
+                href="/docs/jungle-decision-framework"
               />
               <Card
                 title="Decision Tree"
-                desc="Branching logic for mid-game chaos and competing priorities."
+                desc="Visual branching logic for competing priorities under time pressure."
                 href="/docs/decision-tree"
-                cta="Open"
-              />
-              <Card
-                title="Common Mistakes"
-                desc="Debugging autopilot patterns that lose games silently."
-                href="/docs/common-mistakes"
-                cta="Fix"
-              />
-              <Card
-                title="Examples"
-                desc="Walkthroughs that show the framework in real situations."
-                href="/docs/examples"
-                cta="Study"
               />
               <Card
                 title="Glossary"
-                desc="Quick definitions for core terms used throughout the framework."
+                desc="Controlled terminology used consistently across the framework."
                 href="/docs/glossary"
                 cta="Reference"
               />
-            </div>
+            </CardGrid>
           </div>
 
           {/* Footer note */}
           <div style={{ maxWidth: 920, margin: "34px auto 0", opacity: 0.75, fontSize: 14 }}>
-            Tip: Use the left sidebar in docs as your table of contents. This homepage is only for orientation.
+            Systems in the writing samples are fictional and written for demonstration only, except the RAG tutorial's ask-my-docs tool.
           </div>
         </div>
       </main>
