@@ -152,7 +152,7 @@ export default function Home() {
             <CardGrid>
               <Card
                 title="Maintenance Procedure"
-                desc="A MIL-STD-38784-style work package for UAS propeller replacement with WARNING/CAUTION/NOTE advisories."
+                desc="A work package for UAS propeller replacement with MIL-STD-38784 WARNING/CAUTION/NOTE advisories."
                 href="/docs/samples/maintenance-procedure"
                 cta="Read"
               />

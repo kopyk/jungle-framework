@@ -30,7 +30,7 @@ The RAG tutorial describes a real tool I built, **ask-my-docs**.
 
 | Sample | Document type | What it demonstrates |
 |--------|---------------|----------------------|
-| [Maintenance Procedure: UAS Propeller Replacement](./maintenance-procedure) | Technical manual work package | MIL-STD-38784-style WARNING/CAUTION/NOTE hierarchy, prerequisites, and verifiable steps |
+| [Maintenance Procedure: UAS Propeller Replacement](./maintenance-procedure) | Technical manual work package | Work-package layout (MIL-STD-40051-2) with MIL-STD-38784 WARNING/CAUTION/NOTE advisories, prerequisites, and verifiable steps |
 | [Interface Control Document: Telemetry Message](./interface-control-document) | ICD excerpt | Byte-level message definitions, units, ranges, and requirements traceability |
 
 ---

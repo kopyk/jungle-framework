@@ -21,7 +21,7 @@ answers come from your documentation instead of the model's memory.
 You need:
 
 - Python 3.10 or later
-- An Anthropic API key from the [Claude Console](https://console.anthropic.com/)
+- An Anthropic API key from the [Claude Console](https://platform.claude.com/settings/keys) (Settings → API keys)
 - A folder of `.md` files to search (any documentation set works)
 
 ---

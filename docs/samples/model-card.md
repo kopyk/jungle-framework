@@ -88,8 +88,8 @@ doubles the false-alarm rate.
 
 ## 5. Responsible AI Alignment
 
-This section maps the model to the **DoD AI Ethical Principles** and the **NIST AI Risk
-Management Framework (AI RMF 1.0)**.
+This section maps the model to the **DoD AI Ethical Principles** and the **NIST Artificial Intelligence
+Risk Management Framework (AI RMF 1.0, January 2023)**.
 
 | DoD principle | How SKYSWEEP addresses it |
 |---------------|---------------------------|

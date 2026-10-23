@@ -2,7 +2,7 @@
 id: maintenance-procedure
 sidebar_position: 6
 title: "Maintenance Procedure: UAS Propeller Replacement"
-description: Sample work package for removing and installing a propeller on a fictional small unmanned aircraft system, written in MIL-STD-38784 style.
+description: Sample work package for removing and installing a propeller on a fictional small unmanned aircraft system, using a MIL-STD-40051-2 work-package layout and MIL-STD-38784 WARNING/CAUTION/NOTE conventions.
 ---
 
 ## Work Package 0412: Propeller Assembly, Removal and Installation
@@ -20,13 +20,13 @@ Always use the approved technical manual for real equipment.
 
 ### Hazard conventions
 
-This work package uses the standard advisory hierarchy:
+This work package uses the advisory definitions in MIL-STD-38784B:
 
-- **WARNING** — A procedure or condition that can cause **injury or death** if not followed.
-- **CAUTION** — A procedure or condition that can cause **damage to equipment** if not followed.
-- **NOTE** — Information that makes the task easier or clearer.
+- **WARNING** — A procedure or condition that can cause **injury, death, or long-term health hazards** to personnel if not followed.
+- **CAUTION** — A procedure or condition that can cause **damage to or destruction of equipment**, or loss of mission effectiveness, if not followed.
+- **NOTE** — Essential information that is not itself a procedural step.
 
-Advisories always appear **before** the step they apply to.
+WARNINGs and CAUTIONs always appear **before** the step they apply to.
 
 ---
 

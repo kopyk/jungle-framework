@@ -26,7 +26,7 @@ Score each answer on four criteria. Each criterion has a clear pass/fail rule so
 | 3 | **Complete** | Covers every point in the reference answer's "must include" list | Misses one or more required points |
 | 4 | **Honest about gaps** | For out-of-scope questions, says the docs don't cover it | Invents an answer to an out-of-scope question |
 
-**Answer score** = sum of criteria (0–4). **An answer passes only if it scores 1 on Correct and Grounded**, whatever its total.
+**Answer score** = sum of the criteria that apply (0–4). Criteria marked n/a are left out of the total. **An answer passes only if it scores 1 on Correct and Grounded**, whatever its total.
 A complete but wrong answer is worse than an incomplete one.
 
 ---
@@ -80,7 +80,7 @@ Write reference answers **before** you run the assistant. Writing them after rea
 | Grounded | 1 | All claims appear in the cited file |
 | Complete | 0 | Missed the logbook entry |
 | Honest about gaps | n/a | Question is in scope |
-| **Result** | **2/3, Pass** | Passes (correct and grounded), but flag the missed step |
+| **Result** | **2/3 applicable, Pass** | Passes (correct and grounded), but flag the missed step |
 
 ---
 
@@ -91,12 +91,12 @@ Report results **by question type**, not only as one overall number. A single av
 | Question type | Pass rate | n |
 |---------------|-----------|---|
 | Direct lookup | 95% | 20 |
-| Multi-section | 76% | 12 |
+| Multi-section | 75% | 12 |
 | Reworded | 60% | 10 |
 | Out of scope | **50%** | 8 |
-| **Overall** | **77%** | 50 |
+| **Overall** | **76%** | 50 |
 
-In this example, the 77% overall score looks acceptable, but the assistant invents answers to half of
+In this example, the 76% overall score looks acceptable, but the assistant invents answers to half of
 out-of-scope questions. That is the first thing to fix.
 
 ---
