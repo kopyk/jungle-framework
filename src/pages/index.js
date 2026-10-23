@@ -80,7 +80,7 @@ export default function Home() {
   return (
     <Layout
       title={siteConfig.title}
-      description="Technical writing samples for defense, aerospace, and AI systems by Jordan Yan."
+      description="Technical writing samples for AI, defense, and aerospace systems by Jordan Yan."
     >
       <main style={{ padding: "54px 0 72px" }}>
         <div className="container">
@@ -91,13 +91,13 @@ export default function Home() {
             </div>
 
             <h1 style={{ fontSize: 44, letterSpacing: "-0.02em", margin: "10px 0 10px" }}>
-              Documentation for defense, aerospace, and AI systems
+              Documentation for AI systems and the people who build them
             </h1>
 
             <p style={{ fontSize: 18, lineHeight: 1.6, opacity: 0.85, margin: "0 0 26px" }}>
-              Writing samples that show how I document safety-critical hardware,
-              system interfaces, and AI models: accurate, traceable, and easy for
-              operators and engineers to use.
+              Writing samples that show how I document AI models, developer APIs,
+              and safety-critical systems: accurate, tested, and easy for engineers
+              and users to act on.
             </p>
 
             {/* CTAs */}
@@ -117,7 +117,7 @@ export default function Home() {
 
           {/* Defense & AI samples */}
           <div style={{ maxWidth: 980, margin: "34px auto 0" }}>
-            <SectionLabel>Defense, aerospace &amp; AI samples</SectionLabel>
+            <SectionLabel>Artificial intelligence</SectionLabel>
             <CardGrid>
               <Card
                 title="AI Model Card"
@@ -125,6 +125,31 @@ export default function Home() {
                 href="/docs/samples/model-card"
                 cta="Read"
               />
+              <Card
+                title="RAG Tutorial"
+                desc="Build a Q&A bot over your docs in Python with the Claude API, with working, tested code."
+                href="/docs/samples/rag-tutorial"
+                cta="Read"
+              />
+              <Card
+                title="API Reference"
+                desc="Parameters, examples, errors, and rate limits for an AI document-classification endpoint."
+                href="/docs/samples/api-reference"
+                cta="Read"
+              />
+              <Card
+                title="LLM Evaluation Rubric"
+                desc="Pass/fail criteria, test-set design, and reporting for grading an AI assistant's answers."
+                href="/docs/samples/eval-rubric"
+                cta="Read"
+              />
+            </CardGrid>
+          </div>
+
+          {/* Defense & aerospace samples */}
+          <div style={{ maxWidth: 980, margin: "34px auto 0" }}>
+            <SectionLabel>Defense &amp; aerospace</SectionLabel>
+            <CardGrid>
               <Card
                 title="Maintenance Procedure"
                 desc="A MIL-STD-38784-style work package for UAS propeller replacement with WARNING/CAUTION/NOTE advisories."
@@ -165,7 +190,7 @@ export default function Home() {
 
           {/* Footer note */}
           <div style={{ maxWidth: 920, margin: "34px auto 0", opacity: 0.75, fontSize: 14 }}>
-            All systems in the defense and AI samples are fictional and written for demonstration only.
+            Systems in the writing samples are fictional and written for demonstration only, except the RAG tutorial's ask-my-docs tool.
           </div>
         </div>
       </main>

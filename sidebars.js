@@ -4,13 +4,20 @@ const sidebars = {
     'samples/overview',
     {
       type: 'category',
-      label: 'Defense, Aerospace & AI',
+      label: 'Artificial Intelligence',
       collapsed: false,
       items: [
         'samples/model-card',
-        'samples/maintenance-procedure',
-        'samples/interface-control-document',
+        'samples/rag-tutorial',
+        'samples/api-reference',
+        'samples/eval-rubric',
       ],
+    },
+    {
+      type: 'category',
+      label: 'Defense & Aerospace',
+      collapsed: false,
+      items: ['samples/maintenance-procedure', 'samples/interface-control-document'],
     },
   ],
   Framework: [

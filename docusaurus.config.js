@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Jordan Yan Docs',
-  tagline: 'Technical writing samples for defense, aerospace, and AI systems',
+  tagline: 'Technical writing samples for AI, defense, and aerospace systems',
   favicon: 'img/jg-icon.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -93,7 +93,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'Samples',
             position: 'left',
-            label: 'Defense & AI Samples',
+            label: 'Writing Samples',
           },
           {
             type: 'docSidebar',
@@ -115,7 +115,7 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Defense, Aerospace & AI Samples',
+                label: 'Writing Samples',
                 to: '/docs/samples/overview',
               },
               {

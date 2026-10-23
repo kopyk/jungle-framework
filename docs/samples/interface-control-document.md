@@ -1,6 +1,6 @@
 ---
 id: interface-control-document
-sidebar_position: 4
+sidebar_position: 7
 title: "Interface Control Document: Telemetry Message"
 description: Sample ICD excerpt defining a fictional air-vehicle-to-ground-station telemetry message, with byte layout, units, ranges, and requirement traceability.
 ---

@@ -2,7 +2,7 @@
 
 Documentation site at [docs.jordanyan.com](https://docs.jordanyan.com) with two sections:
 
-- **Defense, Aerospace & AI Samples** (`docs/samples/`): an AI model card, a MIL-STD-38784-style maintenance procedure, and an Interface Control Document excerpt. All systems are fictional.
+- **Writing Samples** (`docs/samples/`): AI samples (model card, RAG tutorial, API reference, LLM evaluation rubric) and defense & aerospace samples (MIL-STD-38784-style maintenance procedure, Interface Control Document excerpt). Systems are fictional except the tutorial's ask-my-docs tool.
 - **Jungle Decision Framework** (`docs/`): the original decision-system documentation project, described below.
 
 ## Jungle Decision Framework

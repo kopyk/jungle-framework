@@ -1,6 +1,6 @@
 ---
 id: maintenance-procedure
-sidebar_position: 3
+sidebar_position: 6
 title: "Maintenance Procedure: UAS Propeller Replacement"
 description: Sample work package for removing and installing a propeller on a fictional small unmanned aircraft system, written in MIL-STD-38784 style.
 ---
