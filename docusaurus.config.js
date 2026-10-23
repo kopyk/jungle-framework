@@ -10,8 +10,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Jordan Yan Docs',
-  tagline: 'Technical writing samples for AI, defense, and aerospace systems',
+  title: 'Jungle Bible',
+  tagline: 'Jungling Guide for Documentation Purposes',
   favicon: 'img/jg-icon.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -20,7 +20,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'http://docs.jordanyan.com',
+  url: 'https://docs.jordanyan.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -83,23 +83,22 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'Jordan Yan Docs',
+        title: 'Jungle Bible',
         logo: {
-          alt: 'Jordan Yan Docs Icon',
+          alt: 'Jungle Framework Icon',
           src: 'img/jg-icon.png',
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'Samples',
-            position: 'left',
-            label: 'Writing Samples',
-          },
-          {
-            type: 'docSidebar',
             sidebarId: 'Framework',
             position: 'left',
             label: 'Jungle Framework',
+          },
+          {
+            href: 'https://ai.jordanyan.com',
+            label: 'AI docs',
+            position: 'right',
           },
           {
             href: 'https://www.jordanyan.com',
@@ -114,10 +113,6 @@ const config = {
           {
             title: 'Docs',
             items: [
-              {
-                label: 'Writing Samples',
-                to: '/docs/samples/overview',
-              },
               {
                 label: 'Jungle Decision Framework',
                 to: '/docs/jungle-decision-framework',
@@ -143,7 +138,7 @@ const config = {
           },
         
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Jordan Yan · San Luis Obispo, CA · Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Jungle Bible. Built with Docusaurus.`,
       },
       prism: {
         theme: prismThemes.github,
